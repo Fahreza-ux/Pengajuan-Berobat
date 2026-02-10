@@ -4,126 +4,128 @@
     <title>Formulir Pengajuan Berobat - RSGMP MOESTOPO</title>
     <meta charset="UTF-8">
     <style>
+        /* Format A5 (14.8cm x 21cm) */
+        @page {
+            size: A5;
+            margin: 0.8cm;
+        }
+        
         body {
             font-family: 'Calibri', Arial, sans-serif;
-            margin: 1.5cm;
-            font-size: 11pt;
-            line-height: 1.4;
+            font-size: 9pt;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+            width: 14.8cm;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 25px;
-            border-bottom: 2px solid #000;
-            padding-bottom: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 5px;
         }
         
         .hospital-name {
-            font-size: 16pt;
+            font-size: 11pt;
             font-weight: bold;
             color: #1a5fb4;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             text-transform: uppercase;
         }
         
         .hospital-subname {
-            font-size: 12pt;
+            font-size: 8pt;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
         
         .form-title {
-            font-size: 14pt;
+            font-size: 10pt;
             font-weight: bold;
-            margin: 10px 0;
-            text-decoration: underline;
+            margin: 5px 0;
         }
         
         .form-number {
-            font-size: 10pt;
-            margin-bottom: 5px;
+            font-size: 7pt;
+            margin-bottom: 3px;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 8px 0;
+            margin: 4px 0;
             table-layout: fixed;
+            font-size: 8.5pt;
         }
         
         td {
-            padding: 6px 8px;
+            padding: 4px 5px;
             vertical-align: top;
-            border: 1px solid #000;
+            border: 0.5px solid #000;
             word-wrap: break-word;
         }
         
         .section-title {
             background-color: #e6f2ff;
             font-weight: bold;
-            padding: 8px 10px;
-            margin-top: 15px;
-            border: 1px solid #000;
-            font-size: 11pt;
+            padding: 4px 6px;
+            margin-top: 8px;
+            border: 0.5px solid #000;
+            font-size: 9pt;
         }
         
         .underline {
-            border-bottom: 1px solid #000;
+            border-bottom: 0.5px solid #000;
             display: inline-block;
-            min-width: 150px;
-            padding-bottom: 2px;
+            min-width: 80px;
+            padding-bottom: 1px;
         }
         
         .long-underline {
-            border-bottom: 1px solid #000;
+            border-bottom: 0.5px solid #000;
             display: inline-block;
-            width: 300px;
-            padding-bottom: 2px;
+            width: 180px;
+            padding-bottom: 1px;
         }
         
         .checkbox-group {
-            margin: 5px 0;
+            margin: 3px 0;
         }
         
         .checkbox-item {
-            margin-right: 15px;
+            margin-right: 8px;
             display: inline-block;
+            font-size: 8.5pt;
         }
         
         .signature-area {
-            margin: 20px 0;
-            padding: 12px;
-            border: 1px solid #000;
+            margin: 10px 0;
+            padding: 6px;
+            border: 0.5px solid #000;
             background-color: #f9f9f9;
+            font-size: 8pt;
         }
         
         .signature-line {
-            margin-top: 40px;
-            border-top: 1px solid #000;
-            width: 200px;
+            margin-top: 20px;
+            border-top: 0.5px solid #000;
+            width: 100px;
             text-align: center;
-            padding-top: 3px;
-            font-size: 10pt;
-        }
-        
-        .page-break {
-            page-break-after: always;
+            padding-top: 2px;
+            font-size: 7pt;
         }
         
         .note-box {
             background-color: #f0f8ff;
-            border: 1px solid #b3d4fc;
-            padding: 12px;
-            margin: 12px 0;
-            font-size: 9.5pt;
+            border: 0.5px solid #b3d4fc;
+            padding: 6px;
+            margin: 6px 0;
+            font-size: 7pt;
         }
         
         .required {
             color: #e63946;
-        }
-        
-        .align-right {
-            text-align: right;
         }
         
         .bold {
@@ -131,313 +133,302 @@
         }
         
         .small-text {
-            font-size: 9.5pt;
+            font-size: 7.5pt;
         }
         
         .no-border td {
             border: none;
-            padding: 3px 8px;
+            padding: 2px 5px;
         }
         
         .footer {
             text-align: center;
-            font-size: 9pt;
+            font-size: 7pt;
             color: #666;
-            margin-top: 20px;
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
+            margin-top: 8px;
+            border-top: 0.5px solid #ccc;
+            padding-top: 4px;
+        }
+        
+        .compact-table td {
+            padding: 3px 4px;
+        }
+        
+        .half-width {
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        .left-half {
+            margin-right: 2%;
+        }
+        
+        .right-half {
+            margin-left: 2%;
+        }
+        
+        .page-break {
+            page-break-after: always;
         }
     </style>
 </head>
 <body>
 
-<!-- HALAMAN 1 -->
 <div class="header">
     <div class="hospital-name">RSGMP MOESTOPO</div>
-    <div class="hospital-subname">Rumah Sakit Gigi dan Mulut Pendidikan Moestopo</div>
+    <div class="hospital-subname">Rumah Sakit Gigi dan Mulut Pendidikan</div>
     <div class="form-title">FORMULIR PENGAJUAN BEROBAT</div>
-    <div class="form-number">No. Dokumen: RSGMP-MED/F-001 | Revisi: 01/2024</div>
+    <div class="form-number">No: RSGMP-MED/F-001 | Tgl: ___________</div>
 </div>
 
-<div class="section-title">A. DATA PEMOHON (KARYAWAN)</div>
-<table>
-    <tr>
-        <td width="35%">Nama Karyawan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>NIK / ID Karyawan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Departemen/Bagian</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Jabatan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Tanggal Pengajuan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>No. Telepon/HP</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Email</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-</table>
+<!-- Data Pemohon dan Pasien dalam 2 kolom -->
+<div class="section-title">DATA PEMOHON & PASIEN</div>
 
-<div class="section-title">B. JENIS PASIEN <span class="required">*</span> <span class="small-text">(beri tanda ✓)</span></div>
-<div class="checkbox-group">
-    <table class="no-border">
+<div class="half-width left-half">
+    <table class="compact-table">
         <tr>
-            <td width="25%">□ Karyawan</td>
-            <td width="25%">□ Istri/Suami</td>
-            <td width="25%">□ Anak</td>
-            <td width="25%">□ Saudara Kandung</td>
+            <td colspan="2" style="background-color: #f0f0f0;"><strong>Data Karyawan</strong></td>
+        </tr>
+        <tr>
+            <td width="40%">Nama</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        </tr>
+        <tr>
+            <td>NIK</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        </tr>
+        <tr>
+            <td>Dept/Bagian</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        </tr>
+        <tr>
+            <td>Jabatan</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        </tr>
+        <tr>
+            <td>Telp/HP</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
         </tr>
     </table>
 </div>
 
-<div class="section-title">C. DATA PASIEN <span class="small-text">(diisi jika pasien BUKAN karyawan)</span></div>
-<table>
-    <tr>
-        <td width="35%">Nama Pasien</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Hubungan dengan Karyawan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Usia</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> tahun</td>
-    </tr>
-    <tr>
-        <td>No. Kartu Keluarga</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>No. Telepon/HP Pasien</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-</table>
+<div class="half-width right-half">
+    <table class="compact-table">
+        <tr>
+            <td colspan="2" style="background-color: #f0f0f0;"><strong>Data Pasien</strong></td>
+        </tr>
+        <tr>
+            <td width="40%">Nama Pasien</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        </tr>
+        <tr>
+            <td>Hubungan</td>
+            <td>: 
+                <span class="small-text">
+                    □ Kary&nbsp;&nbsp;
+                    □ Istri&nbsp;&nbsp;
+                    □ Anak&nbsp;&nbsp;
+                    □ Saudara
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>Usia</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;</span> thn</td>
+        </tr>
+        <tr>
+            <td>No. KK</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        </tr>
+        <tr>
+            <td>Telp Pasien</td>
+            <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        </tr>
+    </table>
+</div>
 
-<div class="section-title">D. DATA BEROBAT</div>
-<table>
+<div style="clear: both;"></div>
+
+<div class="section-title">DATA BEROBAT</div>
+<table class="compact-table">
     <tr>
-        <td width="35%">Jenis Pengobatan <span class="required">*</span></td>
+        <td width="30%">Jenis Pengobatan</td>
         <td>
-            □ Rawat Jalan &nbsp;&nbsp;
-            □ Rawat Inap &nbsp;&nbsp;
-            □ Darurat &nbsp;&nbsp;
-            □ Lainnya: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="small-text">
+                □ Rawat Jalan&nbsp;&nbsp;
+                □ Rawat Inap&nbsp;&nbsp;
+                □ Darurat&nbsp;&nbsp;
+                □ Lain: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </span>
         </td>
     </tr>
     <tr>
-        <td>Nama Fasilitas Kesehatan</td>
-        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Faskes</td>
+        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Alamat Fasilitas Kesehatan</td>
-        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Spesialisasi/Dokter</td>
-        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Dokter/Spesialis</td>
+        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
         <td>Perkiraan Biaya</td>
-        <td>: Rp <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>: Rp <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Tanggal Mulai Berobat</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Tanggal Berobat</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> s/d <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Tanggal Selesai Berobat</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Diagnosis/Gejala Penyakit</td>
-        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>Keterangan Tambahan</td>
-        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Diagnosis</td>
+        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
 </table>
 
-<div class="section-title">E. DOKUMEN PENDUKUNG <span class="small-text">(beri tanda ✓ pada dokumen yang dilampirkan)</span></div>
-<table>
+<div class="section-title">DOKUMEN PENDUKUNG <span class="small-text">(✓ yang dilampirkan)</span></div>
+<table class="compact-table">
     <tr>
-        <td width="50%">
-            <div style="margin-bottom: 5px;">□ Surat Rujukan Dokter</div>
-            <div style="margin-bottom: 5px;">□ Kuitansi/Invoice dari Faskes</div>
-            <div style="margin-bottom: 5px;">□ Hasil Pemeriksaan (Lab, Rontgen, dll)</div>
-            <div style="margin-bottom: 5px;">□ Resep Obat</div>
+        <td>
+            <div style="margin-bottom: 2px;">□ Surat Rujukan</div>
+            <div style="margin-bottom: 2px;">□ Kuitansi/Invoice</div>
+            <div style="margin-bottom: 2px;">□ Hasil Pemeriksaan</div>
         </td>
         <td>
-            <div style="margin-bottom: 5px;">□ Kartu Identitas Pasien (KTP/KK)</div>
-            <div style="margin-bottom: 5px;">□ Kartu Keluarga</div>
-            <div style="margin-bottom: 5px;">□ Surat Keterangan dari Perusahaan</div>
-            <div style="margin-bottom: 5px;">□ Lainnya: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            <div style="margin-bottom: 2px;">□ Resep Obat</div>
+            <div style="margin-bottom: 2px;">□ KTP/KK</div>
+            <div style="margin-bottom: 2px;">□ Lain: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
         </td>
     </tr>
 </table>
 
 <div class="signature-area">
-    <div class="bold">PERNYATAAN DAN PERSETUJUAN KARYAWAN</div>
-    <p class="small-text">Saya yang bertanda tangan di bawah ini menyatakan bahwa data yang diberikan di atas adalah benar dan dapat dipertanggungjawabkan. Saya juga menyetujui segala ketentuan yang berlaku mengenai pengajuan berobat di RSGMP MOESTOPO.</p>
+    <div class="bold small-text">PERNYATAAN KARYAWAN</div>
+    <p class="small-text">Saya menyatakan data di atas benar dan bertanggung jawab.</p>
     
-    <div style="margin-top: 25px;">
+    <div style="margin-top: 15px;">
         <div style="float: left; width: 50%;">
-            <div>Tanggal: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-            <div class="signature-line">Tanda Tangan Karyawan</div>
+            <div class="small-text">Tgl: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+            <div class="signature-line">Karyawan</div>
         </div>
         
         <div style="float: right; width: 50%; text-align: center;">
-            <div>Disetujui oleh,</div>
-            <div class="signature-line">Atasan Langsung</div>
+            <div class="small-text">Disetujui,</div>
+            <div class="signature-line">Atasan</div>
         </div>
         <div style="clear: both;"></div>
     </div>
 </div>
 
-<div class="footer">Halaman 1 dari 2 - Formulir Pengajuan Berobat RSGMP MOESTOPO</div>
-
-<!-- HALAMAN 2 -->
+<!-- HALAMAN 2 (Bagian Persetujuan) -->
 <div class="page-break"></div>
 
 <div class="header">
     <div class="hospital-name">RSGMP MOESTOPO</div>
-    <div class="hospital-subname">Rumah Sakit Gigi dan Mulut Pendidikan Moestopo</div>
-    <div class="form-title">FORMULIR PENGAJUAN BEROBAT (LANJUTAN)</div>
-    <div class="form-number">No. Dokumen: RSGMP-MED/F-001 | Halaman: 2/2</div>
+    <div class="form-title">FORM PENGAJUAN BEROBAT (HAL 2)</div>
+    <div class="form-number">Lanjutan dari halaman 1</div>
 </div>
 
-<div class="section-title">F. PERSETUJUAN BAGIAN SDM/HRD</div>
-<table>
+<div class="section-title">PERSETUJUAN BAGIAN SDM</div>
+<table class="compact-table">
     <tr>
-        <td width="35%">Nama Petugas SDM</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td width="35%">Nama Petugas</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
         <td>Jabatan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Tanggal Verifikasi</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Tanggal</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Status Dokumen</td>
+        <td>Status</td>
         <td>
-            □ Lengkap &nbsp;&nbsp;&nbsp;&nbsp;
-            □ Tidak Lengkap
+            <span class="small-text">
+                □ Lengkap&nbsp;&nbsp;
+                □ Tidak Lengkap
+            </span>
         </td>
     </tr>
     <tr>
-        <td>Catatan SDM</td>
-        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Catatan</td>
+        <td>: <span class="long-underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
 </table>
 
-<div style="text-align: center; margin: 15px 0;">
-    <div class="signature-line">Tanda Tangan Petugas SDM</div>
+<div style="text-align: center; margin: 8px 0;">
+    <div class="signature-line">Petugas SDM</div>
 </div>
 
-<div class="section-title">G. PERSETUJUAN BAGIAN KEUANGAN</div>
-<table>
+<div class="section-title">PERSETUJUAN KEUANGAN</div>
+<table class="compact-table">
     <tr>
-        <td width="35%">Nama Petugas Keuangan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td width="35%">Nama Petugas</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
         <td>Jabatan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Tanggal Verifikasi</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Tanggal</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Nominal yang Disetujui</td>
-        <td>: Rp <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Nominal Disetujui</td>
+        <td>: Rp <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Tanggal Pencairan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-    </tr>
-    <tr>
-        <td>No. Bukti Pembayaran</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Tgl Pencairan</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
 </table>
 
-<div style="text-align: center; margin: 15px 0;">
-    <div class="signature-line">Tanda Tangan Petugas Keuangan</div>
+<div style="text-align: center; margin: 8px 0;">
+    <div class="signature-line">Petugas Keuangan</div>
 </div>
 
-<div class="section-title">H. BUKTI PENERIMAAN</div>
-<table>
+<div class="section-title">BUKTI PENERIMAAN</div>
+<table class="compact-table">
     <tr>
-        <td width="35%">Dana telah diterima oleh</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td width="35%">Nama Penerima</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Tanggal Penerimaan</td>
-        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Tanggal Terima</td>
+        <td>: <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
     <tr>
-        <td>Jumlah yang Diterima</td>
-        <td>: Rp <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+        <td>Jumlah Diterima</td>
+        <td>: Rp <span class="underline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
     </tr>
 </table>
 
-<div style="text-align: center; margin: 20px 0;">
-    <div class="signature-line">Tanda Tangan Penerima</div>
+<div style="text-align: center; margin: 10px 0;">
+    <div class="signature-line">Penerima</div>
 </div>
 
 <div class="note-box">
-    <div class="bold">KETENTUAN PENGAJUAN BEROBAT RSGMP MOESTOPO:</div>
-    <ol class="small-text">
-        <li>Formulir ini diisi lengkap dan ditandatangani oleh karyawan pemohon</li>
-        <li>Untuk pengajuan berobat istri/anak, wajib melampirkan fotokopi Kartu Keluarga</li>
-        <li>Pengajuan berobat saudara kandung hanya berlaku dalam kondisi khusus dengan persetujuan Direktur</li>
-        <li>Pengajuan harus disertai dengan dokumen pendukung asli atau fotokopi yang telah dilegalisir</li>
-        <li>Pengajuan untuk rawat inap harus disertai surat rujukan dari dokter</li>
-        <li>Formulir harus diserahkan maksimal 14 hari kerja setelah tanggal berobat</li>
-        <li>Biaya yang tidak sesuai dengan ketentuan RSGMP MOESTOPO menjadi tanggungan pribadi</li>
-        <li>Pengajuan yang tidak lengkap akan dikembalikan kepada pemohon untuk dilengkapi</li>
+    <div class="bold small-text">KETENTUAN SINGKAT:</div>
+    <ol class="small-text" style="margin: 3px 0; padding-left: 15px;">
+        <li>Form diisi lengkap dan ditandatangani</li>
+        <li>Lampirkan fotokopi KK untuk istri/anak</li>
+        <li>Lampirkan dokumen pendukung asli</li>
+        <li>Diserahkan max 14 hari setelah berobat</li>
+        <li>Biaya di luar ketentuan tanggungan pribadi</li>
     </ol>
     
-    <div style="margin-top: 10px;" class="small-text">
-        <div class="bold">INFORMASI KONTAK:</div>
-        <table class="no-border">
-            <tr>
-                <td width="50%">Bagian SDM/HRD</td>
-                <td>: Ext. 101 | Email: sdm@rsgmpmoestopo.id</td>
-            </tr>
-            <tr>
-                <td>Bagian Keuangan</td>
-                <td>: Ext. 102 | Email: keuangan@rsgmpmoestopo.id</td>
-            </tr>
-            <tr>
-                <td>Bagian Kesehatan</td>
-                <td>: Ext. 103 | Email: kesehatan@rsgmpmoestopo.id</td>
-            </tr>
-        </table>
+    <div class="small-text" style="margin-top: 4px;">
+        <strong>Kontak:</strong><br>
+        SDM: Ext. 101 | Keu: Ext. 102<br>
+        Email: sdm@rsgmpmoestopo.id
     </div>
 </div>
 
 <div class="footer">
-    RSGMP MOESTOPO - Jl. Dr. Moestopo No. 47, Jakarta Pusat 10430<br>
-    Telp: (021) 1234567 | Fax: (021) 1234568 | Website: www.rsgmpmoestopo.id
+    RSGMP MOESTOPO - Jl. Dr. Moestopo No. 47, Jakarta<br>
+    Telp: (021) 1234567 | www.rsgmpmoestopo.id
 </div>
 
 </body>
